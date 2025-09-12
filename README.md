@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+🎨 Frontend Campi & Prenotazioni
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Applicazione frontend realizzata con React e Bootstrap.
+Permette di cercare campi sportivi per comune, visualizzarli in card e — se autenticati — prenotarli tramite un form calendario.
 
-## Available Scripts
+🚀 Tecnologie usate
 
-In the project directory, you can run:
+React come framework principale, Bootstrap per lo stile, Fetch API per le chiamate HTTP, JWT (token gestiti via localStorage) per l’autenticazione.
 
-### `npm start`
+📂 Struttura progetto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La cartella src contiene i componenti React (Authform, Campo, Navbar, ecc.), il file App.jsx come componente principale e index.js come entrypoint.
+La cartella public contiene index.html e asset statici.
+Il file package.json gestisce le dipendenze e gli script.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚙️ Installazione
 
-### `npm test`
+Clona la repository ed entra nella cartella del frontend, poi esegui l’installazione delle dipendenze con npm install.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔑 Variabili d’ambiente
 
-### `npm run build`
+Crea un file .env (non incluso nel repo).
+Puoi usare .env.example come riferimento.
+È importante che tutte le variabili in React inizino con REACT_APP_.
+Un esempio tipico è la variabile REACT_APP_API_BASE_URL che definisce l’URL base del backend (per esempio http://localhost:3000/api).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+▶️ Avvio in sviluppo
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Per avviare l’applicazione in modalità sviluppo utilizza npm start.
+Di default sarà disponibile su http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📌 Funzionalità principali
 
-### `npm run eject`
+Ricerca dei campi tramite barra di ricerca, filtrati per comune, con la lista visualizzata sotto la barra.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Visualizzazione dei campi in card con carosello immagini, dettagli come indirizzo e telefono, gestione like/unlike e gestione dedicata al proprietario.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Autenticazione con login e registrazione utente (ruolo utente o proprietario).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Prenotazioni: se autenticato, un bottone “Prenota” apre un form con calendario e orario di inizio e fine.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Gestione campi: il proprietario può creare, modificare ed eliminare campi.
 
-## Learn More
+Like: gli utenti possono mettere o togliere il like ai campi.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🧪 Note sviluppo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I token JWT vengono salvati in localStorage (chiave tokenaccesso).
+Le prenotazioni vengono inviate al backend come stringhe ISO generate con toISOString().
+L’interfaccia utilizza componenti e classi Bootstrap per card, form e modalshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
