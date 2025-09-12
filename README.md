@@ -1,4 +1,4 @@
-🎨 Frontend Campi & Prenotazioni
+# 🎨 Frontend Campi & Prenotazioni
 
 Applicazione frontend realizzata con React e Bootstrap.
 Permette di cercare campi sportivi per comune, visualizzarli in card e — se autenticati — prenotarli tramite un form calendario.
